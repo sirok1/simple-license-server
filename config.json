@@ -1,0 +1,6 @@
+{
+  "ip": "The IP address where you want to deploy the server",
+  "port": "port on which to deploy the server must be a number",
+  "licenseListPath": "Path to token/license file, path must be relative, e.g. \"./licenseList.json\", only .json files are supported",
+  "updateInterval": "The time to check if the licenses/tokens have expired should be a number in milliseconds, for example 1800000 (30 minutes)"
+}

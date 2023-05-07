@@ -1,0 +1,26 @@
+{
+  "name": "simple-license-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirok1/simple-license-server.git"
+  },
+  "keywords": [
+    "license-server"
+  ],
+  "author": "sirok1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sirok1/simple-license-server/issues"
+  },
+  "homepage": "https://github.com/sirok1/simple-license-server#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "rand-token": "^1.0.1"
+  }
+}
