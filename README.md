@@ -92,7 +92,7 @@ new token:  3afeuc5kkY99MAxd
 npm i pm2@latest -g
 ```
 ### Server startup via pm2:
-```pm2 start node . --name SLS --watch --time -e ../logs/err.log -o ../logs/out.log -l ../logs/full.log -- -s```
+```pm2 start node . --name SLS --watch --time -e ./logs/err.log -o ./logs/out.log -l ./logs/full.log -- -s```
 Description of the parameters used here:
 - `--name` - set the name of the application in the list of processes
 - `--watch` - with this parameter, the application will be restarted when files are changed, so that when we add a new token, the application will be restarted immediately with it
