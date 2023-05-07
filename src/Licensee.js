@@ -50,6 +50,10 @@ class Licensee {
         return !res.expired;
     }
 
+    updateMap(){
+        this._createMap()
+    }
+
     static generateToken() {
         return randtoken.generate(16)
     }

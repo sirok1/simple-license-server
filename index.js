@@ -3,6 +3,7 @@ const process = require('node:process')
 const path = require('path')
 const config = require('./config.json')
 const {Server, Licensee} = require('./src')
+const axios = require("axios");
 
 console.log("\x1b[0m", '\n' +
     '_____/\\\\\\\\\\\\\\\\\\\\\\____/\\\\\\_________________/\\\\\\\\\\\\\\\\\\\\\\___        \n' +
@@ -43,9 +44,11 @@ if (process.argv[2]) {
                 process.exit(0)
             }
             let token = Licensee.addToken(path.join(__dirname, config.licenseListPath), Number(process.argv[3]) * 24 * 60 *60 *1000)
-            console.log("\x1b[32m", 'new token: ', token)
-            console.log("\x1b[0m")
-            process.exit(0)
+            axios.get(`http://${config.ip}:${config.port}/updateMap`).then(() => {
+                console.log("\x1b[32m", 'new token: ', token)
+                console.log("\x1b[0m")
+                process.exit(0)
+            })
             break;
 
     }

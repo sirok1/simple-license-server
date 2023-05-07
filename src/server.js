@@ -15,6 +15,11 @@ app.post('/checkKey', (req, res) => {
     })
 })
 
+app.get('/updateMap', (req, res) => {
+    licensee.updateMap()
+    res.sendStatus(200)
+})
+
 class Server {
     _ip;
     _port
